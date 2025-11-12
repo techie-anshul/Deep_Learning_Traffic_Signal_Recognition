@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Traffic Sign Recognition</title>
+    <style>
+        /* Full-page road background */
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-image: url('https://img.freepik.com/free-photo/road-forest_1242615.jpg?t=st=1731278444~exp=1731282044~hmac=4d6d558407b2d4ee4698250b1c5b52b8283a9a82e308b3cfb27d8ffabf83740a&w=1380');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: white;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Semi-transparent upload card */
+        .container {
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 20px;
+            padding: 40px 50px;
+            text-align: center;
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(6px);
+            width: 380px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            font-size: 26px;
+            letter-spacing: 1px;
+        }
+
+        /* Upload button styling */
+        input[type=file] {
+            margin: 20px 0;
+            border: 2px dashed #ddd;
+            padding: 10px;
+            width: 100%;
+            color: #ccc;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        /* Predict button */
+        button {
+            padding: 12px 25px;
+            background: linear-gradient(90deg, #ff4b2b, #ff416c);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgb(248, 247, 247);
+        }
+
+        /* Animated road signs beside the card */
+        .decor {
+            position: absolute;
+            bottom: 20px;
+            right: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .decor img {
+            width: 80px;
+            margin: 5px;
+            transition: transform 0.3s ease;
+        }
+
+        .decor img:hover {
+            transform: rotate(10deg) scale(1.1);
+        }
+
+        .credit {
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+            font-size: 12px;
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚦 Traffic Sign Classifier</h1>
+        <form action="/predict" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <br>
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+
+    <!-- Decorative traffic signs -->
+    <div class="decor">
+        <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="Stop Sign">
+        <img src="https://cdn-icons-png.flaticon.com/512/1494/1494615.png" alt="Yield Sign">
+        <img src="https://cdn-icons-png.flaticon.com/512/1494/1494613.png" alt="Speed Limit Sign">
+    </div>
+
+    <div class="credit">
+        © 2025 Traffic Sign Recognition System | Background by 
+        <a href="https://www.freepik.com/free-photo/road-forest_1242615.htm" target="_blank" style="color:#ffb6b9;text-decoration:none;">Freepik</a>
+    </div>
+</body>
+</html>

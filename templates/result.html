@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Prediction Result</title>
+    <style>
+        body {font-family: Arial; background: #f7f7f7; text-align:center; margin-top: 50px;}
+        .container {background:#fff; border-radius:10px; padding:30px; display:inline-block; box-shadow:0 0 10px #aaa;}
+        img {width: 200px; height: 200px; border-radius:10px;}
+        h2 {color:#333;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Predicted Traffic Sign:</h2>
+        <h3>{{ label }}</h3>
+        <img src="{{ url_for('static', filename='uploads/' + image) }}" alt="Uploaded Image">
+        <br><br>
+        <a href="/">Predict Another Image</a>
+    </div>
+</body>
+</html>
